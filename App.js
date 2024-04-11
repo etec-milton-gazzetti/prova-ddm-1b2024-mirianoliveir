@@ -2,7 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,SafeAreaView, Text, View, ScrollView, ImageBackground,Image, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useFonts, BodoniModa_400regular } from '@expo-google-fonts/BodoniModa';
+import { Cinzel_400Regular } from '@expo-google-fonts/Cinzel';
+
  
  
 
@@ -24,7 +25,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source={fundo} resizeMode="cover" style={{ justifyContent: 'center', flex: 1, width: "100%" }}>
-      <Text style={{alignItems: 'center', justifyContent: 'center', fontFamily: 'BodoniModa', fontSize: 80 }}>Guerra Fria</Text>
+      <Text style={{alignItems: 'center', justifyContent: 'center', fontFamily: 'Cinzel_400regular', fontSize: 80 }}>Guerra Fria</Text>
         <Image source={logo} style={{width: '100%',height:'100%',flex: 1, alignItems: 'center', justifyContent: 'center'}}/> 
         <TouchableOpacity style={{marginTop: 20,alignItems: 'center',
     backgroundColor: '#DDDDDD',
@@ -82,7 +83,7 @@ function Page({ navigation }) {
 const Stack = createNativeStackNavigator();
 export default function App() {
   let [fontsLoaded, fontError]= useFonts({
-    BodoniModa_400regular,
+    Cinzel_400regular,
   });
 
   if (!fontsLoaded && !fontError) {
