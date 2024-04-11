@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import fundo from './assets/fundo.png';
 import logo from './assets/logo.png';
-
+import sobre from './assets/sobre.png'
 
 function HomeScreen({ navigation }) {
   return (
@@ -24,16 +24,21 @@ function HomeScreen({ navigation }) {
 function Sobre({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Sobre</Text>
+      
+      <ImageBackground source={fundo} resizeMode="cover" style={{ justifyContent: 'center', flex: 1, width: "100%" }}>
+      <Image source={sobre} style={{width: '100%',height:'100%',flex: 1, alignItems: 'center', justifyContent: 'center'}}/>
       <TouchableOpacity title='Voltar' onPress={() => navigation.goBack()} />
+      </ImageBackground>
     </View>
   );
 }
 
 function Page({ navigation }) {
   return (
+    <ImageBackground source={fundo} resizeMode="cover" style={{ justifyContent: 'center', flex: 1, width: "100%" }}>
     <ScrollView>
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    
       <Text>História</Text>
       <Text >Elements</Text>
       <Text style={{}}>A Guerra Fria foi um período tenso e complexo que marcou boa parte do século XX, moldando as relações internacionais entre as potências mundiais. Originada após a Segunda Guerra Mundial, entre aproximadamente 1947 e 1991, a Guerra Fria não foi caracterizada por confrontos militares diretos entre as duas superpotências da época, os Estados Unidos e a União Soviética, mas sim por uma intensa rivalidade ideológica, política, econômica e tecnológica.</Text>
@@ -43,7 +48,9 @@ function Page({ navigation }) {
       <Text></Text>
       <TouchableOpacity title='Voltar' onPress={() => navigation.goBack()} />
     </View>
+    
     </ScrollView>
+    </ImageBackground>
   );
 }
 
